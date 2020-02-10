@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" id="navigation">
+
+    <a [routerLink]="['']" class="navbar-brand">
+        <Trivial'Code /> </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#responsive">
+
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="responsive">
+        <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item">
+                <a class="nav-link active" [routerLink]="['']" appColor>
+                    <span class="material-icons">home</span>
+                    Accueil</a>
+            </li>
+
+            <li class="nav-item">
+                <a [routerLink]="['/jouer']" class="nav-link active" appColor>
+                    <span class="material-icons">play_arrow</span>
+                    Jouer</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link active" [routerLink]="['/compte']" appColor>
+                    <span class="material-icons">person</span>
+                    Mon Compte</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link active" [routerLink]="['/faq']" appColor>
+                    <span class="material-icons">question_answer</span>
+                    Faq</a>
+            </li>
+        </ul>
+    </div>
+
+</nav>
