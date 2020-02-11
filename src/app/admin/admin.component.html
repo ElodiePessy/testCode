@@ -1,0 +1,25 @@
+<!-- Side navigation -->
+<div class="col-md-3 sidenav">
+  <a href="#">Langage</a>
+  <a href="#">faq</a>
+  <a href="#">ranking</a>
+  <a href="#">ressource</a>
+</div>
+
+<!-- Page content -->
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Identifiant</th>
+      <th scope="col">Langage</th>
+      <th scope="col">Id-question</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let langage of langages">
+    <tr class="row">
+      <td>{{langage.id}}</td>
+      <td>{{langage.language}}</td>
+      <td>{{langage.question_id}}</td>
+    </tr>
+  </tbody>
+</table>

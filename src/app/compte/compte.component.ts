@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-compte',
@@ -8,13 +7,9 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class CompteComponent implements OnInit {
 
-  
-  
-  constructor(private fb: FormBuilder) { }
+  constructor() { }
 
   ngOnInit() {
-
-
   }
-}
 
+}

@@ -27,9 +27,9 @@ export class LangageService {
                 tap(_ => this.log('fetched langages')),
                 catchError(this.handleError<Langage[]>('getLangages', []))
             );
-        
     }
 
+    
     private handleError<T> (operation = 'operation', result?: T) {
         return (error: any): Observable<T> => {
     

@@ -1,7 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" id="navigation">
 
-    <a [routerLink]="['']" class="navbar-brand">
-        <Trivial'Code /> </a>
+    <a [routerLink]="['']" class="navbar-brand"><Trivial'Code /></a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#responsive">
 
@@ -18,15 +17,15 @@
             </li>
 
             <li class="nav-item">
-                <a [routerLink]="['/jouer']" class="nav-link active" appColor>
+                <a class="nav-link active" [routerLink]="['/jouer']" appColor>
                     <span class="material-icons">play_arrow</span>
                     Jouer</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link active" [routerLink]="['/compte']" appColor>
+                <a class="nav-link active" [routerLink]="['/connexion']" appColor>
                     <span class="material-icons">person</span>
-                    Mon Compte</a>
+                    Connexion</a>
             </li>
 
             <li class="nav-item">

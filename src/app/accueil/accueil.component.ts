@@ -7,10 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccueilComponent implements OnInit {
   
-  
-  public content: string = '';
-  display: boolean = false;
-
   constructor() { }
 
   ngOnInit() {
