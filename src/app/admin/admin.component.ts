@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Langage } from '../shared/models/langage';
-import { LangageService } from '../shared/services/langageService.service';
+import { Language } from '../shared/models/language';
+import { LanguageService } from '../shared/services/languageService.service';
+import { LangagesQuestionsComponent } from './langages-questions/langages-questions.component';
+
 
 @Component({
   selector: 'app-admin',
@@ -9,19 +11,34 @@ import { LangageService } from '../shared/services/langageService.service';
 })
 export class AdminComponent implements OnInit {
  
-  langages: Langage[];
+  languages: Language[];
+  language: Language = new Language();
 
 
-  constructor(private langageService : LangageService) { }
+  constructor(private languageService : LanguageService) { }
 
   ngOnInit() {
-    this.getLangages();
+    this.getLanguages();
   }
 
-getLangages(): void {
+getLanguages(): void {
   
-  this.langageService.getLangages().subscribe(langages => this.langages = langages );
+  this.languageService.getLanguages().subscribe(languages => this.languages = languages );
   
 }
+
+add(libelle: string): void {
+  this.language.language = libelle; 
+  if (!libelle) { return; }
+  this.languageService.addLanguage(this.language)
+    .subscribe(language => {
+      this.languages.push(language);
+    });
+}
+
+delete(language: Language): void {
+  this.languageService.deleteLanguage(language).subscribe();
+}
+
 
 }
